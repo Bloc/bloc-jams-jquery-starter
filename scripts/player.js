@@ -50,6 +50,11 @@ class Player {
 
   prettyTime (timeInSeconds) {
     //Output string like M:SS
+    console.log("test");
+     var timer = buzz.toTimer(timeInSeconds);
+     console.log(timer);
+    // $("#time-control .current-time").text(/*input*/);
+    // $("#time-control .total-time").text(/*input*/);
   }
 }
 
