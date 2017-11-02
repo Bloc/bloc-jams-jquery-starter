@@ -64,8 +64,9 @@ td {
 tr button {
   border: none;
   background: none;
-  padding: 0;
   color: white;
+  cursor: pointer;
+  padding: 0;
 }
 
 tr button:focus {
