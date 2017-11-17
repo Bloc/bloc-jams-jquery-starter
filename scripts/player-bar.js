@@ -19,6 +19,10 @@
      player.skipTo(event.target.value);
    });
 
+   $('#volume-control input').on('input', function (event){
+     player.setVolume(event.target.value);
+   });
+
    $('button#previous').on('click', function() {
      if (player.playState !== 'playing') { return; }
 
@@ -35,7 +39,9 @@
      const currentTime = player.getTime();
      const duration = player.getDuration();
      const percent = (currentTime / duration) * 100;
-     $('#time-control.current-time').text( currentTime );
+     const totalTime = (currentTime - duration);
+     $('#time-control .current-time').text( currentTime );
      $('#time-control input').val(percent);
+     $('#time-control .total-time').text( totalTime );
    }, 1000);
  }
