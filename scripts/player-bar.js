@@ -1,6 +1,6 @@
 {
   $('button#play-pause').on('click', function() {
-    player.playPause();
+    helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
   });
 
@@ -30,13 +30,18 @@
     player.skipTo(event.target.value);
   });
 
+  $('#volume-control input').on('input', function (event) {
+    player.setVolume(event.target.value);
+  });
+
   setInterval( () => {
      if (player.playState !== 'playing') { return; }
      const currentTime = player.getTime();
      const duration = player.getDuration();
      const percent = (currentTime / duration) * 100;
-     $('#time-control .current-time').text( currentTime );
+     $('#time-control .current-time').text( player.prettyTime(currentTime) );
      $('#time-control input').val(percent);
+
    }, 1000);
 
 }
