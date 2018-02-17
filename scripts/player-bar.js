@@ -45,8 +45,7 @@
             }
             else{
                 currentSoundFile.pause();
-            }
-        }
+         
    });
  }
       
