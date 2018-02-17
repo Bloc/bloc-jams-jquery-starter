@@ -1,3 +1,4 @@
+
 class Player {
   constructor () {
     this.currentlyPlaying = album.songs[0];
@@ -16,12 +17,17 @@ class Player {
   
   playPause (song = this.currentlyPlaying) {
     if (this.currentlyPlaying !== song) {
-      // Stop the currently playing sound file (even if nothing is playing)
+      $('audio').each(function(){
+        this.pause(); //stop playing
+      });
+     
       this.soundObject.stop();
-      // Clear classes on the song that's currently playing
+      this.removeClass();
+      
       this.currentlyPlaying.element.removeClass('playing paused');
       
-      // Update our currentlyPlaying and playState properties
+      this.currentlyPlaying.play();
+      this.playState.pause();
       this.currentlyPlaying = song;
       this.playState = 'stopped';
       this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
