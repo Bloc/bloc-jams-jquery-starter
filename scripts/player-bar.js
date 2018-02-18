@@ -34,6 +34,11 @@
      $('#play).hide();
      $('#pause').show;
   });
+   $('#volume-control input').on('input', function (event) {
+      player.setVolume(event.target.value);
+      
+   });
+   
       $('button#previous').on('click', function() {
       var clickHandler = function() {
       if (currentlyPlayingSongNumber !== null){
