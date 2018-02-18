@@ -1,4 +1,3 @@
-
 {
    $('button#play-pause').on('click', function() {
      player.playPause();
@@ -13,12 +12,16 @@
      const nextSong = album.songs[nextSongIndex];
      player.playPause(nextSong);
    });
+   $('#time-control input').on('input', function (event) {
+      player.skipTo(event.target.value);
+   });
    setInterval( () => {
       if (player.playState !== 'playing') { return; }
       const currentTime = player.getTime();
      const duration = player.getDuration();
      const percent = (currentTime / duration) * 100;
        $('#time-control input').val(percent);
+       $('#time-control .current-time').text( currentTime );
    }, 1000);
       $('#prev').click(function() {
          audio.pause();
