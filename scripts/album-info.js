@@ -1,3 +1,4 @@
+{
 <!-- Album Info  -->
 <section id="album-info">
   <!-- Album Image  -->
@@ -9,4 +10,4 @@
     <div id="release-info"></div>
   </div>
 </section>
- 
+}
