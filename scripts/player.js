@@ -1,4 +1,3 @@
-
 class Player {
   constructor () {
     this.currentlyPlaying = album.songs[0];
