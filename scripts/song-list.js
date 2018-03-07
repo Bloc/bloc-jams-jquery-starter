@@ -1,5 +1,5 @@
 {
-  album.songs.forEach( (song, index) => {'
+  album.songs.forEach( (song, index) => {
    song.element = $(`
      <tr>
       <td>
