@@ -4,6 +4,7 @@
     $(this).attr('playState', player.playState);
   });
 
+
   $('button#next').on('click', function(){
     if (player.playerState !== 'playing') { return; }
 
@@ -14,7 +15,6 @@
     player.playPause(nextSong);
   });
 
-{
   $('button#previous').on('click', function() {
     if (player.playState !== 'playing') { return }
     const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
@@ -22,15 +22,5 @@
     if (previousSongIndex === -1) { return }
     const previousSong = album.songs[previousSongIndex];
     player.playPause(previousSong);
-  });
-
-=======
-
-    const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
-    const nextSongIndex = currentSongIndex + 1;
-    if (nextSongIndex >= album.songs.length) { return; }
-    
-    const nextSong = album.songs[nextSongIndex];
-    player.playPause(nextSong);
   });
 }
