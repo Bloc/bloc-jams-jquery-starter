@@ -14,17 +14,17 @@ body {
 
 nav {
   background: hsla(0, 0%, 0%, 0.2);
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* rem is relatvie to its parent's size here is 16px */
 }
 
 nav img {
-  height: 50px;
+  height: 50px; /* logo size */
 }
 
 main {
   width: 100%;
   max-width: 800px;
-  margin: 4rem auto 150px;
+  margin: 4rem auto 150px; /* the value doesn't affect the appreance? */
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -57,6 +57,3 @@ h2.artist {
   opacity: 0.5;
   font-size: 0.8rem;
 }
-
-
-
