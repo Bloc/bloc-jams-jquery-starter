@@ -41,4 +41,5 @@
   $('#volume-control input').on('input', function(event) {
     player.setVolume(event.target.value);
   });
+
 });
