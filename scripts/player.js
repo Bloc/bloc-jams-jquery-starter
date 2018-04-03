@@ -15,8 +15,8 @@ class Player {
   }
 
   prettyTime(timeInSeconds) {
-+    return Math.floor(timeInSeconds / 60) + ':' + (timeInSeconds % 60 < 10 ? '0':'') + Math.floor(timeInSeconds % 60);
-+  }
+    return Math.floor(timeInSeconds / 60) + ':' + (timeInSeconds % 60 < 10 ? '0':'') + Math.floor(timeInSeconds % 60);
+  }
 
   playPause (song = this.currentlyPlaying) {
     if (this.currentlyPlaying !== song) {
