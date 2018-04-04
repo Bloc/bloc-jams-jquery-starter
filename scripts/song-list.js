@@ -20,4 +20,4 @@ $(document).ready(function(){
 
     $('#song-list').append(song.element);
   });
-}
+});
