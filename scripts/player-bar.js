@@ -24,4 +24,4 @@
     player.playPause(previousSong);
   });
 
-});
+};
