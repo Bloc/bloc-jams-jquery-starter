@@ -15,4 +15,5 @@ $('button#next').on('click', function() {
     const nextSong = album.songs[nextSongIndex];
     player.playplayPause(nextSong);
 });
+
 }
