@@ -17,6 +17,7 @@
 
         song.element.on('click', event => {
             player.playPause(song);
+            $('button#play-pause').attr('playState', playerState);
         });
 
         $('#song-list').append(song.element);
