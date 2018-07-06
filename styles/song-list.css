@@ -30,10 +30,10 @@ tr.paused .ion-play {
   display: block;
 }
 
-tr .ion-play, 
+tr .ion-play,
 tr .ion-pause,
 tr:hover .song-number,
-tr.playing .ion-play, 
+tr.playing .ion-play,
 tr.playing .song-number,
 tr.paused .ion-pause,
 tr.paused .song-number {
@@ -99,6 +99,6 @@ tr.playing button:focus .ion-pause {
 }
 
 .song-duration {
-  color: hsla(0, 0%, 100%, 0.5);  
+  color: hsla(0, 0%, 100%, 0.5);
   text-align: right;
 }
