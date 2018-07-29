@@ -3,10 +3,6 @@
     console.log(song.title);
     song.element = $(`
       <tr>
-        <td>index</td>
-        <td>song.title</td>
-        <td>song.duration</td>
-        <td>${index + 1}</td}
         <td>
           <button>
            <span class="song-number">${index + 1}</span>
