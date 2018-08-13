@@ -19,7 +19,7 @@
   font-size: 1.2rem;
   color: hsla(0, 0%, 100%, 0.5);
   transition: all 0.2s ease;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 #buttons button:hover, #buttons button:focus {
@@ -60,7 +60,7 @@
   margin: 0.5rem auto;
   /* max-width: 640px; */
   width: 50%;
-} 
+}
 
 #time-control div,
 #volume-control div {
