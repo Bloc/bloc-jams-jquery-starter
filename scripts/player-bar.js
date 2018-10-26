@@ -25,4 +25,17 @@
         const prevSong = album.songs[prevSongIndex];
         player.playPause(prevSong);
       });
+
+    $('#time-control input').on('input', function(event) {
+      player.skipTo(event.target.value);
+    });
+
+    setInterval( () => {
+      if (player.playState !== 'playing') { return; }
+      const currentTime = player.getTime();
+      const durationTime = player.getDuration();
+      const timepercent = (currentTime/durationTime)*100;
+      $('#time-control .current-time').text(currentTime);
+      $('#time-control input').val(timepercent);
+    }, 1000);
 }
