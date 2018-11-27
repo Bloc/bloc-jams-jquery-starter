@@ -9,5 +9,4 @@ class Helper {
     $('#time-control').text (player.totalTime);
   }
 }
-
-const helper = new Helper();
+var Helper = new helper();
