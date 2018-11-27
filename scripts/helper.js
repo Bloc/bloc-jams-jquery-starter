@@ -7,7 +7,11 @@ class Helper {
 
     $('.total-time').text(player.currentlyPlaying.duration);
     $('#time-control').text (player.totalTime);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> sliders-assignment
     }
   }
 

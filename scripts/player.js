@@ -47,8 +47,13 @@ class Player {
     this.volume = percent;
     this.soundObject.setVolume(percent);
 
+<<<<<<< HEAD
     
   }
+=======
+  
+ }
+>>>>>>> sliders-assignment
 }
 
 const player = new Player();
