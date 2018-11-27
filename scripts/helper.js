@@ -7,6 +7,8 @@ class Helper {
 
     $('.total-time').text(player.currentlyPlaying.duration);
     $('#time-control').text (player.totalTime);
+    
+    }
   }
-}
-var Helper = new helper();
+
+const helper = new Helper();

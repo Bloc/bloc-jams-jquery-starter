@@ -46,7 +46,9 @@ class Player {
   setVolume (percent) {
     this.volume = percent;
     this.soundObject.setVolume(percent);
-  }
+
+  
+ }
 }
 
 const player = new Player();
