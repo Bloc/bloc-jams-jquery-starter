@@ -1,12 +1,13 @@
 class Helper {
- const Helper = 'helper'
+
   playerPauseAndUpdate(song) {
     player.playPause(song);
 
-    const totalTime = player.getDuration();
-    const newSong = album.songs[prevSongIndex];
+    const duration = player.getDuration();
 
-    $('.total-time').text (player.newSong.duration);
+    $('.total-time').text(player.currentlyPlaying.duration);
     $('#time-control').text (player.totalTime);
   }
-};
+}
+
+const helper = new Helper();
