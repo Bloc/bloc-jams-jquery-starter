@@ -10,7 +10,7 @@
     </button>
   </td>
   <td>${song.title}</td>
-  <td>${song.duration}</td>
+  <td>${song.duration}</td> 
    </tr>
 `);
 
