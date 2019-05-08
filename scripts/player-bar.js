@@ -15,10 +15,19 @@
      player.playPause(nextSong);
    });
 
-//}
-// remember to remove }); from above lines - for code to work
-// adding previous button for track 05/07/2019 (May07) ^ copy above and reverse
-// to make previous button
+   $('#time-control input').on('input', function (event) {
+      player.skipTo(event.target.value);
+   });
+
+      setInterval( () => {
+        if (player.playState !== 'playing') { return; }
+        const currentTime = player.getTime();
+        const duration = player.getDuration();
+        const percent = (currentTime / duration) * 100;
+        $('#time-control .current-time').text( currentTime );
+        $('#time-control input').val(percent);
+      }, 1000);
+
 
    $('button#previous').on('click', function () {
       if (player.playState!== 'playing') { return; }
