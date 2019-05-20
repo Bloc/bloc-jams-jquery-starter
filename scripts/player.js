@@ -24,7 +24,7 @@ class Player {
       // Update our currentlyPlaying and playState properties
       this.currentlyPlaying = song;
       this.playState = 'stopped';
-    *  this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
+      this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
     }
     if (this.playState === 'paused' || this.playState === 'stopped') {
       this.soundObject.setVolume( this.volume );
