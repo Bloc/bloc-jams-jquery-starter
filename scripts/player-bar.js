@@ -1,5 +1,5 @@
 {$('button#play-pause').on('click', function() {
-    player.playPause();
+    helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
   });
 
@@ -38,4 +38,5 @@
       $('#time-control input').val(percent);
       }, 1000);
 }
+
 
