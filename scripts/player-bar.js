@@ -40,11 +40,6 @@
 }
 
 
-<<<<<<< HEAD
-//adding comments for github//
-
-
-
 
     $('button#previous').on('click', function() {
       if (player.playState !== 'playing') { return; }
@@ -61,5 +56,3 @@
 
 
 }
-=======
->>>>>>> 10473dadfb68f2e86f47d67280396a69e1a01457
