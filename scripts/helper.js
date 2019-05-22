@@ -7,4 +7,4 @@ class Helper {
 
 }
 
-var helper = new Helper;
+var helper = new Helper();
