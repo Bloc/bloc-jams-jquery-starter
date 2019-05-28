@@ -46,7 +46,27 @@
 
     });
 
+    $('#time-control input').on('input', function (event) {
+      player.skipTo(event.target.value);
+    });
 
+    setInterval( () => {
+
+      // Don't do anything if the player is not currently playing a song
+      if (player.playState !== 'playing') { return; }
+
+      const currentTime = player.getTime();
+      const duration = player.getDuration();
+
+      // Calculate percentage of the total time of the song
+      const percent = (currentTime / duration) * 100;
+      // Update current-time value for the song being played
+      $('#time-control .current-time').text( currentTime );
+
+
+      $('#time-control input').val(percent);
+
+    }, 1000);    // Execute this function every 1 second
 
 
 }
