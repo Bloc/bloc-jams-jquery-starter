@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bloc Jams</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
-    <link rel="stylesheet" type="text/css" href="styles/album.css">
-    <link rel="stylesheet" type="text/css" href="styles/player-bar.css">
-    <link rel="stylesheet" type="text/css" href="styles/song-list.css">
-  </head>
-  <body>
-    <!-- Top bar -->
-    <nav class="navbar">
-      <img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
-    </nav>
 
-    <main>
-      <!-- Album Info  -->
-      <section id="album-info">
-        <!-- Album Image  -->
-        <img id="album-cover-art">
-        <!-- Album Details -->
-        <div class="album-details">
-          <h1 id="album-title"></h1>
-          <h2 class="artist"></h2>
-          <div id="release-info"></div>
-        </div>
-      </section>
+<head>
+  <title>Bloc Jams</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles/album.css">
+  <link rel="stylesheet" type="text/css" href="styles/player-bar.css">
+  <link rel="stylesheet" type="text/css" href="styles/song-list.css">
+</head>
 
-      <!-- Song List  -->
-      <table id="song-list">
-        <colgroup>
-          <col id="song-number-column">
-          <col id="song-title-column">
-          <col id="song-duration-column">
-        </colgroup>  
-      </table>
+<body>
+  <!-- Top bar -->
+  <nav class="navbar">
+    <img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
+  </nav>
 
-    </main>
-    
-    <!-- Player Bar  -->
-    <section id="player-bar">
-      <section id="buttons">
-        <!-- Previous Button -->
-        <button id="previous">
-          <span class="ion-skip-backward"></span>
-        </button>
-        <!-- Play Button  -->
-        <button id="play-pause">
-          <span class="ion-play"></span>
-          <span class="ion-pause"></span>
-        </button>
-        <!-- Next Button -->
-        <button id="next">
-          <span class="ion-skip-forward"></span>
-        </button>
-      </section>
-      <!-- Time Control  -->
-      <section id="time-control">
-        <div class="current-time">–:––</div>
-        <input type="range" class="seek-bar" value="0">
-        <div class="total-time">–:––</div>
-      </section>
-      <!-- Volume Control  -->
-      <div id="volume-control">
-        <div class="icon ion-volume-low"></div>
-        <input type="range" class="seek-bar" value="80">
-        <div class="icon ion-volume-high"></div>
+  <main>
+    <!-- Album Info  -->
+    <section id="album-info">
+      <!-- Album Image  -->
+      <img id="album-cover-art">
+      <!-- Album Details -->
+      <div class="album-details">
+        <h1 id="album-title"></h1>
+        <h2 class="artist"></h2>
+        <div id="release-info"></div>
       </div>
-
-      
     </section>
 
-    <!-- Scripts  -->
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
-    <script src="scripts/album-data.js"></script>
-    <script src="scripts/player.js"></script>
-    <script src="scripts/album-info.js"></script>
-    <script src="scripts/song-list.js"></script>
-    <script src="scripts/player-bar.js"></script>
-  </body>
+    <!-- Song List  -->
+    <table id="song-list">
+      <colgroup>
+        <col id="song-number-column">
+        <col id="song-title-column">
+        <col id="song-duration-column">
+      </colgroup>
+    </table>
+
+  </main>
+
+  <!-- Player Bar  -->
+  <section id="player-bar">
+    <section id="buttons">
+      <!-- Previous Button -->
+      <button id="previous">
+        <span class="ion-skip-backward"></span>
+      </button>
+      <!-- Play Button  -->
+      <button id="play-pause">
+        <span class="ion-play"></span>
+        <span class="ion-pause"></span>
+      </button>
+      <!-- Next Button -->
+      <button id="next">
+        <span class="ion-skip-forward"></span>
+      </button>
+    </section>
+    <!-- Time Control  -->
+    <section id="time-control">
+      <div class="current-time">–:––</div>
+      <input type="range" class="seek-bar" value="0">
+      <div class="total-time">–:––</div>
+    </section>
+    <!-- Volume Control  -->
+    <div id="volume-control">
+      <div class="icon ion-volume-low"></div>
+      <input type="range" class="seek-bar" value="80">
+      <div class="icon ion-volume-high"></div>
+    </div>
+
+
+  </section>
+
+  <!-- Scripts  -->
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+  <script src="scripts/album-data.js"></script>
+  <script src="scripts/player.js"></script>
+  <script src="scripts/album-info.js"></script>
+  <script src="scripts/song-list.js"></script>
+  <script src="scripts/player-bar.js"></script>
+</body>
+
 </html>
