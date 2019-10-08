@@ -55,6 +55,6 @@
         if (previousSongIndex == -1) { return; }
 
         const previousSong = album.songs[previousSongIndex];
-        helper.playPauseAndUpdate(previousSong);
+        helper.playPauseAndUpdate(previousSong); 
             });
 }
