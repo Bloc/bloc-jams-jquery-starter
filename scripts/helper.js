@@ -8,4 +8,4 @@ class Helper{
   }
 }
 
-var helper = new Helper(player.currentlyPlaying);
+var helper = new Helper(song);
