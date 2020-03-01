@@ -15,12 +15,20 @@
     player.playPause(nextSong);
    });
 
+   setInterval( () => {
+       if (player.playState !== 'playing') { return; }
+       const currentTime = player.getTime();
+       const duration = player.getDuration();
+       const percent = (currentTime / duration) * 100;
+       $('#time-control input').val(percent);
+       }, 1000);
+
    $('button#previous').on('click', function() {
      if (player.playState !== 'playing') { return; }
 
      const currentSongIndex = album.songs.indexOf(player.currentlyPlaying);
      const previousSongIndex = currentSongIndex - 1;
-     if (previousSongIndex >= album.songs.length) { return; }
+     if (previousSongIndex < 0) { return; }
 
      const previousSong = album.songs[previousSongIndex];
      player.playPause(previousSong);
@@ -30,12 +38,4 @@
       player.skipTo(event.target.value);
   });
 
-  setInterval( () => {
-    }, 1000);
-    if (player.playState !== 'playing') { return; }
-    const currentTime = player.getTime();
-    const duration = player.getDuration();
-    const percent = (currentTime / duration) * 100;
-    $('#time-control input').val(percent);
-    }, 1000);
  }
