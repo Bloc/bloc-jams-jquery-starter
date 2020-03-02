@@ -1,6 +1,5 @@
-export class Helper(){
+export class Helper{
 
-class Helper{
   constructor(song){
     this.song = song;
   }
@@ -10,4 +9,3 @@ class Helper{
 }
 
 var helper = new Helper(song);
-}
