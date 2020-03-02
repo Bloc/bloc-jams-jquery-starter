@@ -40,5 +40,5 @@ import {Helper} from './helper.js';
         player.setVolume(event.target.value);
   });
 
- }
-}
+});
+});
