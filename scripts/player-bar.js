@@ -1,4 +1,3 @@
-import {Helper} from './helper.js';
 
   $('button#play-pause').on('click', function() {
     helper.playPauseAndUpdate();
