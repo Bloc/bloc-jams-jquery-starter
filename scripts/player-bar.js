@@ -1,4 +1,7 @@
 {
+  import {helper} from helper.js
+  export class Helper(){
+}
   $('button#play-pause').on('click', function() {
     helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
@@ -29,7 +32,6 @@
 
      const previousSong = album.songs[previousSongIndex];
      helper.playPauseAndUpdate(previousSong);
-    });
 
      $('button#previous').on('click', function() {
 
