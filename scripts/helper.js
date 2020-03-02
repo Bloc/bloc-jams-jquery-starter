@@ -7,5 +7,3 @@ export class Helper{
     player.playPause(song);
   }
 }
-
-var helper = new Helper(song);
