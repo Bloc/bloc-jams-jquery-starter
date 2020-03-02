@@ -1,7 +1,6 @@
+import {helper} from ./helper.js
+
 {
-  import {helper} from helper.js
-  export class Helper(){
-}
   $('button#play-pause').on('click', function() {
     helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
@@ -43,3 +42,4 @@
   });
 
  }
+}

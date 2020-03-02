@@ -1,3 +1,4 @@
+export class Helper(){
 
 class Helper{
   constructor(song){
@@ -9,3 +10,4 @@ class Helper{
 }
 
 var helper = new Helper(song);
+}
