@@ -33,13 +33,12 @@
        const previousSong = album.songs[previousSongIndex];
        helper.playPauseAndUpdate(previousSong);
       });
-      
+
     $('#time-control input').on('input', function (event){
       player.skipTo(event.target.value);
+});
 
       $('#volume-control input').on('input', function (event){
         player.setVolume(event.target.value);
 
-
-});
 });
