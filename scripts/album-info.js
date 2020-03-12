@@ -1,5 +1,9 @@
 {
   $('#album-title').text(album.title);
 
-  $('#album-cover-art').attr("src", album.albumArtUrl);
+  $('img#album-cover-art').attr("src", album.albumArtUrl); //what is this actually doing? I didn't orginally type 'img' and it still worked
+
+  $('.artist').text(album.artist);
+
+  $('#release-info').text(album.releaseInfo);
 }
