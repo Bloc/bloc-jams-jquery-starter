@@ -13,8 +13,6 @@
     if (nextSongIndex >=album.songs.length) {return; }
     const nextSong = album.songs[nextSongIndex];
     player.playPause(nextSong);
-  /* if (currentSongIndex !== album.songs.length-1){
-      player.playPause(nextSong)}; */
   });
 
   $('button#previous').on('click', function(){
