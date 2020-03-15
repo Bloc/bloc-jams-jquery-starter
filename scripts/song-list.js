@@ -10,11 +10,11 @@
           </button>
         </td>
         <td>${song.title}</td>
-        <td>${(song.duration /60).toFixed(2)}</td>
+        <td>${song.duration}</td>
       </tr>
     `);
     song.element.on('click', event => {
-      player.playPause(song); //where does 'player' in player.playPause come from?
+      helper.playPauseAndUpdate(song); //where does 'player' in player.playPause come from?
       $('button#play-pause').attr('playState', player.playState);
     });
 

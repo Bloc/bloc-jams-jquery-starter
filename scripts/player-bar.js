@@ -1,6 +1,6 @@
 {
   $('button#play-pause').on('click', function(){ //what is 'button'?
-    player.playPause(); //why not 'player.playPause(song)' <-- argument included in parentheses
+    helper.playPauseAndUpdate(); //why not 'player.playPause(song)' <-- argument included in parentheses
     $(this).attr('playState', player.playState);
   });
 
@@ -12,7 +12,7 @@
     const nextSongIndex = currentSongIndex + 1;
     if (nextSongIndex >=album.songs.length) {return; }
     const nextSong = album.songs[nextSongIndex];
-    player.playPause(nextSong);
+    helper.playPauseAndUpdate(nextSong);
   });
 
   $('button#previous').on('click', function(){
@@ -22,12 +22,17 @@
     const previousSongIndex = currentSongIndex - 1;
     if (previousSongIndex < 0) { return; }
     const previousSong = album.songs[previousSongIndex];
-    player.playPause(previousSong);
+    helper.playPauseAndUpdate(previousSong);
   });
+
   $('#time-control input').on('input', function(event){ //why event here and not the other event handlers?
     player.skipTo(event.target.value); //where did 'event.target' and 'event.target.value' come from?
 
   });
+
+  $('#volume-control input').on('input', function(event){
+    player.setVolume(event.target.value);
+  })
 
   setInterval( () => { //confused as to why this is written this way
     if(player.playState !== 'playing') { return; } //why is this line here in this exact position?
